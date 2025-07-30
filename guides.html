@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Machina Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#8b5cf6',
+            accent: '#06b6d4',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-sans antialiased text-gray-800">
+  <!-- Hero -->
+  <header class="bg-gradient-to-br from-secondary via-primary to-accent text-white py-32 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="container mx-auto px-6 max-w-5xl relative z-10">
+      <div class="animate-fade-in-up">
+        <div class="mb-4">
+          <span class="inline-block bg-white/20 text-white border border-white/30 rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm">
+            Now in Beta
+          </span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+          Help others. Grow yourself.
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+          Become a Machina Guide and earn on your terms with 100% AI support
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button class="text-lg px-8 py-4 bg-white text-primary hover:bg-gray-100 font-bold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105" onclick="document.querySelector('#waitlist-section').scrollIntoView({behavior: 'smooth'})">
+            Start Now
+          </button>
+          <a href="#calculator" class="text-lg px-8 py-4 bg-white/20 text-white hover:bg-white hover:text-primary font-semibold rounded-lg border-2 border-white/50 backdrop-blur-sm transition-all duration-300">
+            See Earnings Calculator
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+  </header>
+
+  <!-- Who are you -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-4xl text-center">
+      <h2 class="text-4xl font-bold mb-8 text-gray-900">Is this you?</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">🤝</div>
+          <h3 class="text-xl font-semibold mb-3">Naturally empathetic</h3>
+          <p class="text-gray-600">Kind, caring, and an excellent listener who people trust</p>
+        </div>
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">🌟</div>
+          <h3 class="text-xl font-semibold mb-3">Natural supporter</h3>
+          <p class="text-gray-600">People naturally lean on you for advice and emotional support</p>
+        </div>
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-xl font-semibold mb-3">Future-focused</h3>
+          <p class="text-gray-600">Fast learner excited by the future of work and helping others grow</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you get -->
+  <section class="py-20">
+    <div class="container mx-auto px-6 max-w-6xl text-center">
+      <h2 class="text-4xl font-bold mb-4 text-gray-900">What you get</h2>
+      <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">Everything you need to build a meaningful career helping others</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="text-5xl mb-6">🌍</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Flexible, remote income</h3>
+          <p class="text-gray-600 leading-relaxed">Set your own hours & rates—work from anywhere in the world.</p>
+        </div>
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="text-5xl mb-6">🤖</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">100% AI support</h3>
+          <p class="text-gray-600 leading-relaxed">Ellie generates science-backed game plans so you can focus on human connection.</p>
+        </div>
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="text-5xl mb-6">🎓</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Career growth</h3>
+          <p class="text-gray-600 leading-relaxed">Hands-on experience in mental health; we help you work towards certifications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-5xl text-center">
+      <h2 class="text-4xl font-bold mb-4 text-gray-900">How it works</h2>
+      <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">Get started in just three simple steps</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6">1</div>
+          <h4 class="text-2xl font-bold mb-4 text-gray-900">Get Certified</h4>
+          <p class="text-gray-600 leading-relaxed">Take our free self-guided course and earn your certification in as little as 24 hours.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6">2</div>
+          <h4 class="text-2xl font-bold mb-4 text-gray-900">Set Up Profile</h4>
+          <p class="text-gray-600 leading-relaxed">Create your guide profile, set your rate, and start sharing on social media.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6">3</div>
+          <h4 class="text-2xl font-bold mb-4 text-gray-900">Start Earning</h4>
+          <p class="text-gray-600 leading-relaxed">Book 45-minute sessions through your personal link</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Earnings calculator -->
+  <section class="py-16 bg-gray-50" id="calculator">
+    <div class="container mx-auto px-6 md:px-0 max-w-3xl text-center">
+      <h2 class="text-3xl font-bold mb-8">Earnings calculator</h2>
+
+      <div class="mb-8 text-left">
+        <label class="font-semibold" for="hours">Hours per week: <span id="hoursVal" class="font-bold">12</span></label>
+        <input id="hours" type="range" min="1" max="40" value="12" class="w-full mt-2 slider" />
+      </div>
+
+      <div class="mb-8 text-left">
+        <label class="font-semibold" for="rate">Session rate ($): 
+          <input id="rateNum" type="number" min="40" max="200" step="5" value="60" class="w-24 px-2 py-1 border rounded mr-2 text-gray-800 inline-block align-middle" />
+        </label>
+        <input id="rate" type="range" min="40" max="200" step="5" value="60" class="w-full mt-2 slider" />
+        <p class="text-sm text-gray-500 mt-1">Session duration: 45&nbsp;minutes</p>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-xl p-6 mb-6">
+        <h3 class="text-2xl font-semibold mb-2">Estimated monthly income</h3>
+        <p class="text-4xl font-extrabold text-primary" id="income">$3,360</p>
+        <p class="text-sm text-gray-500">after 30% Machina cut</p>
+      </div>
+
+      <div id="lifestyle" class="text-lg"></div>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section id="waitlist-section" class="py-20 bg-gradient-to-br from-secondary to-primary text-white text-center">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <h2 class="text-4xl font-bold mb-4">Ready to get started?</h2>
+      <p class="text-xl mb-8 text-gray-100">Join our waitlist and be among the first to start earning as a Machina Guide</p>
+      <form id="waitlist-form-guide" class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+        <input required type="email" class="form-input flex-grow px-6 py-4 rounded-lg text-gray-800 text-lg" placeholder="Enter your email address" />
+        <button type="submit" class="px-8 py-4 bg-white text-primary font-bold rounded-lg text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl">Join Waitlist</button>
+      </form>
+      <div id="waitlist-success-guide" class="mt-6 hidden bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+        <div class="text-2xl mb-2">🎉</div>
+        <div class="text-lg font-semibold">Thanks! We'll be in touch soon with next steps.</div>
+      </div>
+      <p class="text-sm text-gray-200 mt-6">We'll send you details about our certification program and next steps.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Machina.coach</h3>
+          <p class="text-gray-300 mb-4">Combining the power of AI with the effectiveness of human connection to help people build the life they want.</p>
+          <div class="flex space-x-4">
+            <span class="text-sm bg-gray-800 px-3 py-1 rounded-full">🔒 HIPAA Compliant</span>
+            <span class="text-sm bg-gray-800 px-3 py-1 rounded-full">✨ Now in Beta</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">For Guides</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#calculator" class="hover:text-white transition-colors">Earnings Calculator</a></li>
+            <li><a href="#waitlist-section" class="hover:text-white transition-colors">Join Waitlist</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Certification</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">For Clients</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="index.html" class="hover:text-white transition-colors">Get Started</a></li>
+            <li><a href="index.html#waitlist-section" class="hover:text-white transition-colors">Join Beta</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">How It Works</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 Machina.coach. All rights reserved. | Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/earnings.js"></script>
+  <script src="assets/js/waitlist.js"></script>
+</body>
+</html>

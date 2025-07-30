@@ -1,0 +1,39 @@
+// Waitlist form handler
+// Reusable for client and guide forms
+
+document.addEventListener('DOMContentLoaded', () => {
+  const ENDPOINT = 'https://msainz.app.n8n.cloud/webhook/machina_waitlist';
+
+  function attach(formId, userType) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const emailInput = form.querySelector('input[type="email"]');
+    const successDiv = document.getElementById(`waitlist-success-${userType}`);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      try {
+        await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            user_type: userType,
+            date_added: new Date().toISOString(),
+          }),
+        });
+        form.classList.add('d-none');
+        successDiv.classList.remove('d-none');
+      } catch (err) {
+        alert('Sorry, something went wrong. Please try again later.');
+        console.error(err);
+      }
+    });
+  }
+
+  attach('waitlist-form-client', 'client');
+  attach('waitlist-form-guide', 'guide');
+});

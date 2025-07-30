@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #6f42c1;
+  --gradient-start: #6f42c1;
+  --gradient-end: #9b59b6;
+  --bg-light: #f8f9fa;
+  --text-dark: #212529;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+section { padding: 4rem 0; }
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+/* Hero */
+.bg-gradient, .hero {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: #fff;
+  text-align: center;
+}
+
+/* Generic spacing helpers adopted from bootstrap names */
+.py-5 { padding-block: 4rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+
+/* Simple grid to mimic .row / .col-* */
+.row { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.col-md-4, .col-6, .col-md-3 { flex: 1 1 100%; }
+@media(min-width:768px){
+  .col-md-4 { flex: 1 1 calc(33.333% - 1.5rem); }
+  .col-md-3 { flex: 1 1 calc(25% - 1.5rem); }
+  .col-6 { flex: 1 1 calc(50% - 1.5rem); }
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  flex: 1 1 auto;
+}
+.card-title { font-weight: 600; margin-bottom: .5rem; }
+.card-text { opacity: .8; }
+
+/* Badge */
+.badge { display: inline-block; padding: .35em .65em; border-radius: .25rem; font-size: .875rem; }
+.bg-warning { background: #ffc107; color: #000; }
+.bg-primary { background: var(--primary); }
+.text-dark { color: #000; }
+.text-white { color: #fff; }
+
+/* List group mimic */
+.list-group { list-style: none; }
+.list-group-item { padding: .75rem 1rem; border: 1px solid #e5e5e5; }
+.list-group-flush .list-group-item { border-left:0;border-right:0; }
+
+/* Stats */
+.display-6 { font-size: 2rem; }
+.fw-bold { font-weight: 700; }
+
+/* Accordion replacement using details */
+.accordion-item { margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+.accordion-button { display:block; width:100%; text-align:left; background:none; border:none; padding:1rem 1.25rem; font-weight:600; cursor:pointer; }
+.accordion-body { padding:1rem 1.25rem; border-top:1px solid #ddd; }
+.accordion-collapse { display:none; }
+.accordion-button.collapsed + .accordion-collapse { display:none; }
+
+/* Waitlist section */
+.waitlist-section { background: var(--primary); color:#fff; text-align:center; }
+.waitlist-section input[type=email] { padding:.75rem 1rem; border:none; border-radius:8px; width:100%; }
+.waitlist-section button { padding:.75rem 1.25rem; border:none; border-radius:8px; background:#fff; color:var(--primary); font-weight:600; cursor:pointer; }
+
+.d-none { display:none !important; }
+.d-grid { display:grid; }
+
+/* Utilities */
+.text-center { text-align:center; }

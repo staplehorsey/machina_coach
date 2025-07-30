@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machina Coach – Build the Life You Want</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#8b5cf6',
+            accent: '#06b6d4',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-sans antialiased text-gray-800">
+  <!-- Hero -->
+  <header class="bg-gradient-to-br from-primary via-secondary to-accent text-white py-32 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10"></div>
+    <div class="container mx-auto px-6 max-w-5xl relative z-10">
+      <div class="animate-fade-in-up">
+        <div class="mb-4">
+          <span class="inline-block bg-white/20 text-white border border-white/30 rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm">
+            Now in Beta
+          </span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+          Build the life you want
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+          Combining the power of AI with the effectiveness of human connection
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button class="text-lg px-8 py-4 bg-white text-primary hover:bg-gray-100 font-bold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105" onclick="document.querySelector('#waitlist-section').scrollIntoView({behavior: 'smooth'})">
+            Get Started
+          </button>
+          <a href="guides.html" class="text-lg px-8 py-4 bg-white/20 text-white hover:bg-white hover:text-primary font-semibold rounded-lg border-2 border-white/50 backdrop-blur-sm transition-all duration-300">
+            Become a Guide
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+  </header>
+
+  <!-- Is this you? -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-4xl text-center">
+      <h2 class="text-4xl font-bold mb-8 text-gray-900">Is this you?</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">😔</div>
+          <h3 class="text-xl font-semibold mb-3">Feeling stuck?</h3>
+          <p class="text-gray-600">Struggling with loneliness, confidence, meaning, or direction in life</p>
+        </div>
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-semibold mb-3">Ready for change?</h3>
+          <p class="text-gray-600">Want to build meaningful habits and achieve your goals with proven support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What you get -->
+  <section class="py-20">
+    <div class="container mx-auto px-6 max-w-6xl text-center">
+      <h2 class="text-4xl font-bold mb-4 text-gray-900">What you get</h2>
+      <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">A complete support system designed to help you actually achieve your goals</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="text-5xl mb-6">🧠</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Science-backed AI</h3>
+          <p class="text-gray-600 leading-relaxed">Identify meaningful goals and develop habits you actually stick to with proven techniques.</p>
+        </div>
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="text-5xl mb-6">🤝</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Human connection</h3>
+          <p class="text-gray-600 leading-relaxed">Empathetic guides proven to increase goal achievement by <span class="font-bold text-primary">90%</span>.</p>
+        </div>
+        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="text-5xl mb-6">📈</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Real progress</h3>
+          <p class="text-gray-600 leading-relaxed">Measurable change observable over 20 weeks with continuous support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 md:px-0 max-w-6xl text-center">
+      <h2 class="text-3xl font-bold mb-12">Outcomes</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <p class="text-4xl font-extrabold text-primary mb-1">58%</p>
+          <p class="opacity-80">Increase in sense of purpose</p>
+        </div>
+        <div>
+          <p class="text-4xl font-extrabold text-primary mb-1">45%</p>
+          <p class="opacity-80">Decrease in anxiety</p>
+        </div>
+        <div>
+          <p class="text-4xl font-extrabold text-primary mb-1">35%</p>
+          <p class="opacity-80">Improvement in feelings of depression</p>
+        </div>
+        <div>
+          <p class="text-4xl font-extrabold text-primary mb-1">25%</p>
+          <p class="opacity-80">More confident in career path</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-0 max-w-5xl text-center">
+      <h2 class="text-3xl font-bold mb-12">How it works</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Step 1</h4>
+          <p>Meet with Ellie, our HIPAA-compliant expert AI, for your initial consultation.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Step 2</h4>
+          <p>Book an appointment with your guide to review goals and get started.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-2">Step 3</h4>
+          <p>Meet weekly with your guide. Ellie stays with you 24/7 for support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 md:px-0 max-w-3xl">
+      <h2 class="text-3xl font-bold mb-8 text-center">FAQ</h2>
+      <div class="space-y-4">
+        <details class="border rounded-lg p-4">
+          <summary class="cursor-pointer font-semibold">Who are my Ellie guides?</summary>
+          <p class="mt-2">They are vetted individuals who have completed our certification program.</p>
+        </details>
+        <details class="border rounded-lg p-4">
+          <summary class="cursor-pointer font-semibold">Is my data private?</summary>
+          <p class="mt-2">Absolutely. We are fully HIPAA-compliant and never sell your data.</p>
+        </details>
+        <details class="border rounded-lg p-4">
+          <summary class="cursor-pointer font-semibold">Can I change my guide?</summary>
+          <p class="mt-2">Yes. Your data stays with you and you can switch anytime.</p>
+        </details>
+        <details class="border rounded-lg p-4">
+          <summary class="cursor-pointer font-semibold">Is this therapy?</summary>
+          <p class="mt-2">No. Machina and Ellie are not a substitute for therapy. If you are experiencing a mental-health crisis please contact emergency services or the suicide-prevention hotline.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist form -->
+  <section id="waitlist-section" class="py-20 bg-gradient-to-br from-primary to-secondary text-white text-center">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <h2 class="text-4xl font-bold mb-4">Ready to transform your life?</h2>
+      <p class="text-xl mb-8 text-gray-100">Join our beta and be among the first to experience AI-powered life coaching</p>
+      <form id="waitlist-form-client" class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+        <input required type="email" class="form-input flex-grow px-6 py-4 rounded-lg text-gray-800 text-lg" placeholder="Enter your email address" />
+        <button type="submit" class="px-8 py-4 bg-white text-primary font-bold rounded-lg text-lg hover:bg-gray-100 transition-all duration-300">Join Beta</button>
+      </form>
+      <div id="waitlist-success-client" class="mt-6 hidden bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+        <div class="text-2xl mb-2">🎉</div>
+        <div class="text-lg font-semibold">Thanks! We'll be in touch soon.</div>
+      </div>
+      <p class="text-sm text-gray-200 mt-6">We'll send you early access details and never spam you.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Machina.coach</h3>
+          <p class="text-gray-300 mb-4">Combining the power of AI with the effectiveness of human connection to help people build the life they want.</p>
+          <div class="flex space-x-4">
+            <span class="text-sm bg-gray-800 px-3 py-1 rounded-full">🔒 HIPAA Compliant</span>
+            <span class="text-sm bg-gray-800 px-3 py-1 rounded-full">✨ Now in Beta</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">For Clients</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#waitlist-section" class="hover:text-white transition-colors">Join Beta</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Outcomes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">For Guides</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="guides.html" class="hover:text-white transition-colors">Become a Guide</a></li>
+            <li><a href="guides.html#calculator" class="hover:text-white transition-colors">Earnings Calculator</a></li>
+            <li><a href="guides.html#waitlist-section" class="hover:text-white transition-colors">Join Waitlist</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 Machina.coach. All rights reserved. | Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/waitlist.js"></script>
+</body>
+</html>
