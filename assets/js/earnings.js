@@ -13,21 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Lifestyle data with costs and items
   const lifestyles = {
     pocket: {
-      title: '💰 Some Pocket Money',
-      subtitle: 'Perfect for side income (~12 hrs/week)',
+      title: '💰 Extra Income',
+      subtitle: 'Perfect for side income (~4 hrs/week)',
       items: [
-        { icon: '📱', text: 'Phone bill', cost: 80 },
+        { icon: '📱', text: 'Phone & streaming', cost: 80 },
         { icon: '☕', text: 'Daily coffee treats', cost: 120 },
-        { icon: '💄', text: 'Beauty & self-care', cost: 150 },
+        { icon: '🧘', text: 'Wellness & self-care', cost: 150 },
         { icon: '🛍️', text: 'Shopping & clothes', cost: 200 },
         { icon: '🍽️', text: 'Nice dinners out', cost: 300 },
         { icon: '✈️', text: 'Weekend getaway fund', cost: 250 }
       ],
-      color: 'from-pink-400 to-purple-500'
+      color: 'from-purple-400 to-blue-500'
     },
     nomad: {
       title: '🌴 Digital Nomad Life',
-      subtitle: 'Live & work anywhere (~20 hrs/week)',
+      subtitle: 'Live & work anywhere (~12 hrs/week)',
       items: [
         { icon: '📱', text: 'International phone plan', cost: 100 },
         { icon: '🏠', text: 'Beautiful Bali villa (monthly)', cost: 800 },
@@ -36,17 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { icon: '✈️', text: 'Flight to next destination', cost: 400 },
         { icon: '💻', text: 'Co-working space membership', cost: 100 },
         { icon: '🧘', text: 'Yoga classes & wellness', cost: 200 },
-        { icon: '👗', text: 'Tropical wardrobe refresh', cost: 300 }
+        { icon: '👕', text: 'Climate-appropriate wardrobe', cost: 300 }
       ],
       color: 'from-cyan-400 to-blue-500'
     },
     career: {
       title: '🚀 Career Builder',
-      subtitle: 'Build your future (~30+ hrs/week)',
+      subtitle: 'Build your future (~20+ hrs/week)',
       items: [
         { icon: '📱', text: 'Phone & internet bills', cost: 120 },
         { icon: '🏠', text: 'Nice apartment rent', cost: 2000 },
-        { icon: '🍼', text: 'Family expenses', cost: 1500 },
+        { icon: '👶', text: 'Family expenses', cost: 1500 },
         { icon: '💰', text: 'Monthly savings', cost: 1000 },
         { icon: '🎓', text: 'Professional development', cost: 300 },
         { icon: '🚗', text: 'Car payment', cost: 500 },
