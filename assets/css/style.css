@@ -287,20 +287,233 @@
   margin-right: 6px;
 }
 
+/* Mobile Navigation */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray-700);
+  cursor: pointer;
+  padding: 8px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
+  /* Navigation */
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .text-4xl {
+    font-size: 2rem !important;
+  }
+  
+  .text-3xl {
+    font-size: 1.75rem !important;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem !important;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Spacing */
+  .py-20 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  .py-16 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  
+  .py-12 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .mb-8 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Cards */
   .card {
     padding: 16px;
+    margin-bottom: 16px;
   }
   
   .lifestyle-card {
     padding: 16px;
+    margin: 12px 0;
+  }
+  
+  .lifestyle-item {
+    padding: 6px 10px;
+    margin: 6px 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Forms */
+  .form-input {
+    padding: 14px 16px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  /* Flex layouts */
+  .sm\:flex-row {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  
+  .md\:grid-cols-2,
+  .md\:grid-cols-3,
+  .md\:grid-cols-4 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  /* Calculator specific */
+  .calculator-section {
+    padding: 16px;
+  }
+  
+  .slider-container {
+    margin: 16px 0;
+  }
+  
+  .slider {
+    height: 10px;
+    margin: 12px 0;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* Income display */
+  #income {
+    font-size: 2.5rem !important;
+  }
+  
+  /* Lifestyle cards mobile optimization */
+  .lifestyle-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  
+  .lifestyle-card .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  /* Grid layouts */
+  .grid {
+    gap: 16px !important;
+  }
+  
+  /* Container padding */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Max width adjustments */
+  .max-w-4xl,
+  .max-w-6xl {
+    max-width: 100% !important;
+  }
+  
+  /* Footer */
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 24px !important;
+  }
+  
+  /* Trust badges */
+  .trust-badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    margin: 2px;
+  }
+  
+  /* Navigation links */
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  .text-4xl {
+    font-size: 1.75rem !important;
+  }
+  
+  .py-20 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .card {
+    padding: 12px;
+  }
+  
+  .lifestyle-card {
+    padding: 12px;
   }
   
   .btn-primary,
   .btn-secondary {
     padding: 10px 20px;
     font-size: 14px;
+  }
+  
+  #income {
+    font-size: 2rem !important;
+  }
+  
+  .container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 }
 

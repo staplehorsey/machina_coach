@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     career: {
       title: '🚀 Career Builder',
-      subtitle: 'Build your future (~20+ hrs/week)',
+      subtitle: 'Build your future (~30+ hrs/week)',
       items: [
         { icon: '📱', text: 'Phone & internet bills', cost: 120 },
         { icon: '🏠', text: 'Nice apartment rent', cost: 2000 },

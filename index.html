@@ -19,6 +19,14 @@
       },
     };
   </script>
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Re Cs Fs Pe Rs Ms capture Ve calculateEventProperties Ds register register_once register_for_session unregister unregister_for_session zs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty js As createPersonProfile Ns Is Us opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Os debug I Ls getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_EEiSIb0k4QMhnQ6V52aobzhBXDBF0964nQaM2smxebF', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2025-05-24',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+</script>
 </head>
 <body class="font-sans antialiased text-gray-800">
   <!-- Hero -->
@@ -49,6 +57,26 @@
     </div>
     <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
   </header>
+
+  <!-- Video Hook -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl text-center">
+      <h2 class="text-3xl font-bold mb-4 text-gray-900">See How It Works</h2>
+      <p class="text-lg text-gray-600 mb-8">Watch this quick overview of the Machina coaching experience</p>
+      
+      <div class="max-w-sm mx-auto">
+        <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="aspect-ratio: 9/16;">
+          <iframe 
+            src="https://player.vimeo.com/video/1106088218?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="Machina Client Experience">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Is this you? -->
   <section class="py-20 bg-gray-50">
@@ -172,7 +200,7 @@
       <p class="text-xl mb-8 text-gray-100">Join our beta and be among the first to experience AI-powered life coaching</p>
       <form id="waitlist-form-client" class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
         <input required type="email" class="form-input flex-grow px-6 py-4 rounded-lg text-gray-800 text-lg" placeholder="Enter your email address" />
-        <button type="submit" class="px-8 py-4 bg-white text-primary font-bold rounded-lg text-lg hover:bg-gray-100 transition-all duration-300">Join Beta</button>
+        <button type="submit" class="btn-primary px-8 py-4 bg-white text-primary font-bold rounded-lg text-lg hover:bg-gray-100">Join Beta</button>
       </form>
       <div id="waitlist-success-client" class="mt-6 hidden bg-white/20 rounded-lg p-4 backdrop-blur-sm">
         <div class="text-2xl mb-2">🎉</div>
