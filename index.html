@@ -12,8 +12,31 @@
         extend: {
           colors: {
             primary: '#6366f1',
-            secondary: '#8b5cf6',
+            secondary: '#8b5cf6', 
             accent: '#06b6d4',
+            neon: '#ff006e',
+            pink: '#fb7185',
+            sunset: '#f97316',
+          },
+          fontFamily: {
+            'display': ['Inter', 'system-ui', 'sans-serif'],
+            'body': ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out',
+            'float': 'float 6s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out infinite 2s',
+            'spin-slow': 'spin 8s linear infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
           },
         },
       },
@@ -28,185 +51,388 @@
     })
 </script>
 </head>
-<body class="font-sans antialiased text-gray-800">
+<body class="font-body antialiased text-gray-800 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
   <!-- Hero -->
-  <header class="bg-gradient-to-br from-primary via-secondary to-accent text-white py-32 text-center relative overflow-hidden">
-    <div class="absolute inset-0 bg-black/10"></div>
+  <header class="bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white py-20 md:py-32 text-center relative overflow-hidden">
+    <!-- Floating shapes -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-10 left-10 w-20 h-20 bg-blue-300/20 rounded-full blur-xl animate-pulse"></div>
+      <div class="absolute top-32 right-16 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s"></div>
+      <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-indigo-300/20 rounded-full blur-lg animate-pulse" style="animation-delay: 2s"></div>
+      <div class="absolute bottom-32 right-1/3 w-24 h-24 bg-white/5 rounded-full animate-float-delayed"></div>
+    </div>
+    
     <div class="container mx-auto px-6 max-w-5xl relative z-10">
       <div class="animate-fade-in-up">
-        <div class="mb-4">
-          <span class="inline-block bg-white/20 text-white border border-white/30 rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm">
-            Now in Beta
+        <div class="mb-6">
+          <span class="inline-block bg-white/20 text-white border border-white/30 rounded-full px-6 py-3 text-sm font-bold backdrop-blur-sm shadow-lg">
+            ✨ Now in Beta!
           </span>
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-          Build the life you want
+        <h1 class="font-display text-4xl md:text-7xl font-black leading-tight mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+          Build the Life<br/>You Actually Want 🌟
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
-          Combining the power of AI with the effectiveness of human connection
+        <p class="text-lg md:text-2xl mb-8 text-white/95 max-w-4xl mx-auto font-medium">
+          Stop dreaming, start doing. Get <span class="font-bold text-blue-200">AI-powered coaching</span> with <span class="font-bold text-purple-200">real human support</span> to finally achieve your goals.
         </p>
+        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-6 mb-8 max-w-2xl mx-auto border border-white/30">
+          <p class="text-lg font-semibold text-white mb-2">🎯 Here's what's different:</p>
+          <p class="text-white/95">AI gives you the roadmap, humans keep you accountable. No more going it alone.</p>
+        </div>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button class="text-lg px-8 py-4 bg-white text-primary hover:bg-gray-100 font-bold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105" onclick="document.querySelector('#waitlist-section').scrollIntoView({behavior: 'smooth'})">
-            Get Started
+          <button class="text-lg px-10 py-5 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-black rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-blue-500/50 hover:scale-105 transform" onclick="document.querySelector('#waitlist-section').scrollIntoView({behavior: 'smooth'})">
+            Start Your Transformation 🚀
           </button>
-          <a href="guides.html" class="text-lg px-8 py-4 bg-white/20 text-white hover:bg-white hover:text-primary font-semibold rounded-lg border-2 border-white/50 backdrop-blur-sm transition-all duration-300">
-            Become a Guide
+          <a href="guides.html" class="text-lg px-8 py-4 bg-white/20 text-white hover:bg-white hover:text-primary font-bold rounded-2xl border-2 border-white/50 backdrop-blur-sm transition-all duration-300 hover:scale-105">
+            💰 Earn as a Guide
           </a>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+    
+    <!-- Wavy bottom -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="white"/>
+      </svg>
+    </div>
   </header>
 
   <!-- Video Hook -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h2 class="text-3xl font-bold mb-4 text-gray-900">See How It Works</h2>
-      <p class="text-lg text-gray-600 mb-8">Watch this quick overview of the Machina coaching experience</p>
+  <section id="video" class="py-20 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-accent/10 to-neon/10 rounded-full blur-2xl"></div>
+    
+    <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+      <div class="mb-12">
+        <span class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          🎥 60-Second Demo
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          See the Magic in Action ✨
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Watch how <span class="font-bold text-primary">AI coaching</span> and <span class="font-bold text-secondary">human connection</span> work together to create real breakthroughs
+        </p>
+      </div>
       
-      <div class="max-w-sm mx-auto">
-        <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="aspect-ratio: 9/16;">
-          <iframe 
-            src="https://player.vimeo.com/video/1106088218?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-            frameborder="0" 
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Machina Client Experience">
-          </iframe>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="text-left space-y-6">
+            <div class="bg-gradient-to-r from-neon/10 to-sunset/10 rounded-2xl p-6 border border-neon/20">
+              <h3 class="font-bold text-lg mb-2 text-gray-900">🤖 AI That Actually Gets You</h3>
+              <p class="text-gray-600">Ellie learns your patterns, triggers, and goals to give personalized guidance 24/7</p>
+            </div>
+            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 border border-primary/20">
+              <h3 class="font-bold text-lg mb-2 text-gray-900">👥 Human Connection That Counts</h3>
+              <p class="text-gray-600">Your guide keeps you motivated, celebrates wins, and helps you push through challenges</p>
+            </div>
+            <div class="bg-gradient-to-r from-accent/10 to-pink/10 rounded-2xl p-6 border border-accent/20">
+              <h3 class="font-bold text-lg mb-2 text-gray-900">🏆 Results That Stick</h3>
+              <p class="text-gray-600">20-week programs with measurable progress and lasting habit formation</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="order-1 lg:order-2">
+          <div class="max-w-lg mx-auto lg:mx-0 w-full">
+            <div class="relative overflow-hidden rounded-3xl shadow-2xl" style="aspect-ratio: 16/9; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2), 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+              <iframe 
+                src="https://player.vimeo.com/video/1106061354?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;"
+                title="Machina Client Experience">
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Is this you? -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h2 class="text-4xl font-bold mb-8 text-gray-900">Is this you?</h2>
-      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">😔</div>
-          <h3 class="text-xl font-semibold mb-3">Feeling stuck?</h3>
-          <p class="text-gray-600">Struggling with loneliness, confidence, meaning, or direction in life</p>
+  <!-- Target Audience -->
+  <section class="py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-neon/10 to-pink/10 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+    
+    <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+      <div class="mb-12">
+        <span class="inline-block bg-gradient-to-r from-neon to-pink text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          👋 Is This You?
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight py-2">
+          Ready to Stop Struggling Alone?
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          If you're tired of the same old patterns and ready for <span class="font-bold text-primary">real change</span>, you're in the right place.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-white/40 hover:shadow-neon/20 transition-all duration-300">
+          <div class="text-5xl mb-6 animate-bounce">😤</div>
+          <h3 class="text-2xl font-black mb-4 text-gray-900">Tired of Going It Alone</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">You've tried apps, books, and pure willpower but keep falling back into the same old patterns. Sound familiar?</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-medium">📱 Failed apps</span>
+            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">📚 Unread books</span>
+            <span class="bg-sunset/10 text-sunset px-3 py-1 rounded-full text-sm font-medium">🚫 Broken promises</span>
+          </div>
         </div>
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">🎯</div>
-          <h3 class="text-xl font-semibold mb-3">Ready for change?</h3>
-          <p class="text-gray-600">Want to build meaningful habits and achieve your goals with proven support</p>
+        
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-white/40 hover:shadow-primary/20 transition-all duration-300">
+          <div class="text-5xl mb-6 animate-bounce" style="animation-delay: 0.5s">🎆</div>
+          <h3 class="text-2xl font-black mb-4 text-gray-900">Ready for Real Change</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">You want to build meaningful habits and achieve your goals with proven support that actually works.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">🎯 Clear goals</span>
+            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">💪 Real support</span>
+            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">✨ Lasting change</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- What you get -->
-  <section class="py-20">
-    <div class="container mx-auto px-6 max-w-6xl text-center">
-      <h2 class="text-4xl font-bold mb-4 text-gray-900">What you get</h2>
-      <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">A complete support system designed to help you actually achieve your goals</p>
+  <section class="py-20 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-48 h-48 bg-gradient-to-tr from-accent/5 to-neon/5 rounded-full blur-2xl"></div>
+    
+    <div class="container mx-auto px-6 max-w-6xl text-center relative z-10">
+      <div class="mb-16">
+        <span class="inline-block bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          🎁 What You Get
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight py-2">
+          Your Complete Support System
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Everything you need to <span class="font-bold text-primary">finally achieve your goals</span> and build the life you want
+        </p>
+      </div>
+      
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">🧠</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Science-backed AI</h3>
-          <p class="text-gray-600 leading-relaxed">Identify meaningful goals and develop habits you actually stick to with proven techniques.</p>
+        <div class="bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-primary/20 hover:shadow-primary/30 transition-all duration-300 group">
+          <div class="text-6xl mb-6 group-hover:animate-bounce transition-all duration-300">🤖</div>
+          <h3 class="text-2xl font-black mb-4 text-gray-900">AI Coach (Ellie)</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">24/7 personalized guidance that learns your patterns, triggers, and goals to keep you on track.</p>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">⏰ 24/7 Available</span>
+            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">🧠 Learns You</span>
+          </div>
         </div>
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">🤝</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Human connection</h3>
-          <p class="text-gray-600 leading-relaxed">Empathetic guides proven to increase goal achievement by <span class="font-bold text-primary">90%</span>.</p>
+        
+        <div class="bg-gradient-to-br from-neon/5 to-pink/5 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-neon/20 hover:shadow-neon/30 transition-all duration-300 group">
+          <div class="text-6xl mb-6 group-hover:animate-bounce transition-all duration-300" style="animation-delay: 0.2s">👥</div>
+          <h3 class="text-2xl font-black mb-4 text-gray-900">Human Guide</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">Weekly 1-on-1 sessions with a trained guide who celebrates wins and pushes through challenges.</p>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <span class="bg-neon/10 text-neon px-3 py-1 rounded-full text-sm font-medium">💪 Accountability</span>
+            <span class="bg-pink/10 text-pink px-3 py-1 rounded-full text-sm font-medium">🎉 Motivation</span>
+          </div>
         </div>
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">📈</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Real progress</h3>
-          <p class="text-gray-600 leading-relaxed">Measurable change observable over 20 weeks with continuous support.</p>
+        
+        <div class="bg-gradient-to-br from-accent/5 to-sunset/5 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-accent/20 hover:shadow-accent/30 transition-all duration-300 group">
+          <div class="text-6xl mb-6 group-hover:animate-bounce transition-all duration-300" style="animation-delay: 0.4s">📈</div>
+          <h3 class="text-2xl font-black mb-4 text-gray-900">Real Progress</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">Measurable change over 20 weeks with continuous support and habit formation that sticks.</p>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">📊 Measurable</span>
+            <span class="bg-sunset/10 text-sunset px-3 py-1 rounded-full text-sm font-medium">✨ Lasting</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Outcomes -->
-  <section class="py-16">
-    <div class="container mx-auto px-6 md:px-0 max-w-6xl text-center">
-      <h2 class="text-3xl font-bold mb-12">Outcomes</h2>
+  <section class="py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-neon/10 to-pink/10 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+    
+    <div class="container mx-auto px-6 max-w-6xl text-center relative z-10">
+      <div class="mb-16">
+        <span class="inline-block bg-gradient-to-r from-accent to-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          📈 Proven Results
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          Real People, Real Results
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Our members don't just set goals — they <span class="font-bold text-primary">achieve them</span> and transform their lives
+        </p>
+      </div>
+      
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div>
-          <p class="text-4xl font-extrabold text-primary mb-1">58%</p>
-          <p class="opacity-80">Increase in sense of purpose</p>
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-white/40 hover:shadow-primary/20 transition-all duration-300">
+          <div class="text-5xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-3">90%</div>
+          <p class="text-gray-700 font-semibold">🎯 Achieve their primary goal</p>
         </div>
-        <div>
-          <p class="text-4xl font-extrabold text-primary mb-1">45%</p>
-          <p class="opacity-80">Decrease in anxiety</p>
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-white/40 hover:shadow-neon/20 transition-all duration-300">
+          <div class="text-5xl font-black bg-gradient-to-r from-neon to-pink bg-clip-text text-transparent mb-3">85%</div>
+          <p class="text-gray-700 font-semibold">🌟 Report improved wellbeing</p>
         </div>
-        <div>
-          <p class="text-4xl font-extrabold text-primary mb-1">35%</p>
-          <p class="opacity-80">Improvement in feelings of depression</p>
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-white/40 hover:shadow-accent/20 transition-all duration-300">
+          <div class="text-5xl font-black bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-3">80%</div>
+          <p class="text-gray-700 font-semibold">💪 Build lasting habits</p>
         </div>
-        <div>
-          <p class="text-4xl font-extrabold text-primary mb-1">25%</p>
-          <p class="opacity-80">More confident in career path</p>
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-white/40 hover:shadow-sunset/20 transition-all duration-300">
+          <div class="text-5xl font-black bg-gradient-to-r from-sunset to-neon bg-clip-text text-transparent mb-3">75%</div>
+          <p class="text-gray-700 font-semibold">🚀 More confident in career</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How it works -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6 md:px-0 max-w-5xl text-center">
-      <h2 class="text-3xl font-bold mb-12">How it works</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-left">
-        <div>
-          <h4 class="text-xl font-semibold mb-2">Step 1</h4>
-          <p>Meet with Ellie, our HIPAA-compliant expert AI, for your initial consultation.</p>
+  <section class="py-20 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-accent/5 to-neon/5 rounded-full blur-2xl"></div>
+    
+    <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+      <div class="mb-16">
+        <span class="inline-block bg-gradient-to-r from-secondary to-accent text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          🚀 Simple Process
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          How It Works
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Get started in minutes and see <span class="font-bold text-primary">real progress</span> within your first week
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-primary/20 hover:shadow-primary/30 transition-all duration-300 text-center">
+          <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-6">1</div>
+          <h4 class="text-2xl font-black mb-4 text-gray-900">Take Assessment</h4>
+          <p class="text-gray-600 leading-relaxed">Quick 5-minute assessment to identify your goals.</p>
         </div>
-        <div>
-          <h4 class="text-xl font-semibold mb-2">Step 2</h4>
-          <p>Book an appointment with your guide to review goals and get started.</p>
+        
+        <div class="bg-gradient-to-br from-neon/5 to-pink/5 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-neon/20 hover:shadow-neon/30 transition-all duration-300 text-center">
+          <div class="w-16 h-16 bg-gradient-to-r from-neon to-pink rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-6">2</div>
+          <h4 class="text-2xl font-black mb-4 text-gray-900">Meet Ellie & Your Guide</h4>
+          <p class="text-gray-600 leading-relaxed">Start chatting with Ellie, your AI coach, and have your first session with your human guide to build your plan.</p>
         </div>
-        <div>
-          <h4 class="text-xl font-semibold mb-2">Step 3</h4>
-          <p>Meet weekly with your guide. Ellie stays with you 24/7 for support.</p>
+        
+        <div class="bg-gradient-to-br from-accent/5 to-sunset/5 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-accent/20 hover:shadow-accent/30 transition-all duration-300 text-center">
+          <div class="w-16 h-16 bg-gradient-to-r from-accent to-sunset rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-6">3</div>
+          <h4 class="text-2xl font-black mb-4 text-gray-900">Transform Your Life</h4>
+          <p class="text-gray-600 leading-relaxed">Weekly sessions with your guide plus 24/7 AI support. Watch as you build habits that actually stick.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="py-16">
-    <div class="container mx-auto px-6 md:px-0 max-w-3xl">
-      <h2 class="text-3xl font-bold mb-8 text-center">FAQ</h2>
-      <div class="space-y-4">
-        <details class="border rounded-lg p-4">
-          <summary class="cursor-pointer font-semibold">Who are my Ellie guides?</summary>
-          <p class="mt-2">They are vetted individuals who have completed our certification program.</p>
+  <section class="py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-indigo-200/20 to-purple-200/20 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-br from-blue-200/20 to-indigo-200/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+    
+    <div class="container mx-auto px-6 max-w-4xl text-center relative z-10">
+      <div class="mb-12">
+        <span class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          ❓ FAQ
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+          Got Questions?
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Here are the most common questions about <span class="font-bold text-indigo-600">how Machina works</span>
+        </p>
+      </div>
+      
+      <div class="space-y-6 text-left max-w-3xl mx-auto">
+        <details class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-3xl p-6 shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300 group">
+          <summary class="cursor-pointer font-bold text-lg text-gray-900 flex items-center justify-between group-hover:text-indigo-600 transition-colors">
+            <span>👥 Who are my guides?</span>
+            <span class="text-2xl group-open:rotate-180 transition-transform duration-300">+</span>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Vetted individuals who have completed our certification program. They're trained to work alongside our AI to support your journey.</p>
         </details>
-        <details class="border rounded-lg p-4">
-          <summary class="cursor-pointer font-semibold">Is my data private?</summary>
-          <p class="mt-2">Absolutely. We are fully HIPAA-compliant and never sell your data.</p>
+        
+        <details class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-3xl p-6 shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group">
+          <summary class="cursor-pointer font-bold text-lg text-gray-900 flex items-center justify-between group-hover:text-purple-600 transition-colors">
+            <span>🔒 Is my data private?</span>
+            <span class="text-2xl group-open:rotate-180 transition-transform duration-300">+</span>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Absolutely. We'll never sell or share your data. Your privacy and security are our top priorities.</p>
         </details>
-        <details class="border rounded-lg p-4">
-          <summary class="cursor-pointer font-semibold">Can I change my guide?</summary>
-          <p class="mt-2">Yes. Your data stays with you and you can switch anytime.</p>
+        
+        <details class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-3xl p-6 shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group">
+          <summary class="cursor-pointer font-bold text-lg text-gray-900 flex items-center justify-between group-hover:text-blue-600 transition-colors">
+            <span>🔄 Can I change my guide?</span>
+            <span class="text-2xl group-open:rotate-180 transition-transform duration-300">+</span>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">Yes! Your data stays with you and you can switch guides anytime. We want to make sure you have the perfect match for your personality and goals.</p>
         </details>
-        <details class="border rounded-lg p-4">
-          <summary class="cursor-pointer font-semibold">Is this therapy?</summary>
-          <p class="mt-2">No. Machina and Ellie are not a substitute for therapy. If you are experiencing a mental-health crisis please contact emergency services or the suicide-prevention hotline.</p>
+        
+        <details class="bg-white/80 backdrop-blur-sm border border-white/40 rounded-3xl p-6 shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300 group">
+          <summary class="cursor-pointer font-bold text-lg text-gray-900 flex items-center justify-between group-hover:text-indigo-600 transition-colors">
+            <span>🏥 Is this therapy?</span>
+            <span class="text-2xl group-open:rotate-180 transition-transform duration-300">+</span>
+          </summary>
+          <p class="mt-4 text-gray-600 leading-relaxed">No. Machina and our guides are not a substitute for therapy. If you're experiencing a mental health crisis, please contact emergency services or the suicide prevention hotline.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- Waitlist form -->
-  <section id="waitlist-section" class="py-20 bg-gradient-to-br from-primary to-secondary text-white text-center">
-    <div class="container mx-auto px-6 max-w-2xl">
-      <h2 class="text-4xl font-bold mb-4">Ready to transform your life?</h2>
-      <p class="text-xl mb-8 text-gray-100">Join our beta and be among the first to experience AI-powered life coaching</p>
-      <form id="waitlist-form-client" class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-        <input required type="email" class="form-input flex-grow px-6 py-4 rounded-lg text-gray-800 text-lg" placeholder="Enter your email address" />
-        <button type="submit" class="btn-primary px-8 py-4 text-lg transition-all duration-300 shadow-lg hover:shadow-xl">Join Waitlist</button>
-      </form>
-      <div id="waitlist-success-client" class="mt-6 hidden bg-white/20 rounded-lg p-4 backdrop-blur-sm">
-        <div class="text-2xl mb-2">🎉</div>
-        <div class="text-lg font-semibold">Thanks! We'll be in touch soon.</div>
+  <section id="waitlist-section" class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white text-center relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-300/20 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-300/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+    <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-300/20 rounded-full blur-xl animate-pulse" style="animation-delay: 2s"></div>
+    
+    <div class="container mx-auto px-6 max-w-3xl relative z-10">
+      <div class="mb-8">
+        <div class="text-6xl mb-6 animate-bounce">🎉</div>
+        <h2 class="font-display text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+          Ready to Transform Your Life?
+        </h2>
+        <p class="text-lg md:text-2xl mb-8 text-white/95 max-w-2xl mx-auto font-medium">
+          Join <span class="font-bold text-blue-200">1000+ people</span> already transforming their lives with Machina. <span class="font-bold text-purple-200">Be among the first to experience the future of personal growth!</span>
+        </p>
       </div>
-      <p class="text-sm text-gray-200 mt-6">We'll send you early access details and never spam you.</p>
+      
+      <div class="bg-white/15 backdrop-blur-md rounded-3xl p-8 mb-8 border border-white/30">
+        <form id="waitlist-form-client" class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <input required type="email" class="form-input flex-grow px-6 py-5 rounded-2xl text-gray-800 text-lg font-medium border-0 shadow-xl" placeholder="✨ Enter your email to get started" />
+          <button type="submit" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-10 py-5 font-black rounded-2xl text-lg transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transform">
+            Join the Waitlist 🚀
+          </button>
+        </form>
+        
+        <div id="waitlist-success-client" class="mt-6 hidden bg-blue-500/20 rounded-2xl p-6 backdrop-blur-sm border border-blue-400/30">
+          <div class="text-4xl mb-3 animate-bounce">🎊</div>
+          <div class="text-xl font-bold mb-2">Welcome to the future of personal growth!</div>
+          <div class="text-white/95">We'll send you early access details and next steps within 24 hours.</div>
+        </div>
+      </div>
+      
+      <div class="flex flex-wrap justify-center items-center gap-6 text-white/90 text-sm font-medium">
+        <div class="flex items-center">
+          <span class="text-green-300 mr-2">✓</span>
+          Early access to beta
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-300 mr-2">✓</span>
+          No spam, ever
+        </div>
+        <div class="flex items-center">
+          <span class="text-green-300 mr-2">✓</span>
+          Cancel anytime
+        </div>
+      </div>
     </div>
   </section>
 
@@ -218,7 +444,6 @@
           <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Machina.coach</h3>
           <p class="text-gray-300 mb-4">Combining the power of AI with the effectiveness of human connection to help people build the life they want.</p>
           <div class="flex space-x-4">
-            <span class="text-sm bg-gray-800 px-3 py-1 rounded-full">🔒 HIPAA Compliant</span>
             <span class="text-sm bg-gray-800 px-3 py-1 rounded-full">✨ Now in Beta</span>
           </div>
         </div>

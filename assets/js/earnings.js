@@ -10,50 +10,53 @@ document.addEventListener('DOMContentLoaded', () => {
   const SESSION_MIN = 45;
   const MACHINA_CUT = 0.3;
 
-  // Lifestyle data with costs and items
+  // Lifestyle data with costs and items - Updated with vibrant Partiful-inspired design
   const lifestyles = {
     pocket: {
-      title: '💰 Extra Income',
-      subtitle: 'Perfect for side income (~4 hrs/week)',
+      title: '✨ Side Hustle Vibes',
+      subtitle: 'Perfect starter income (~4 hrs/week)',
       items: [
-        { icon: '📱', text: 'Phone & streaming', cost: 80 },
-        { icon: '☕', text: 'Daily coffee treats', cost: 120 },
-        { icon: '🧘', text: 'Wellness & self-care', cost: 150 },
-        { icon: '🛍️', text: 'Shopping & clothes', cost: 200 },
-        { icon: '🍽️', text: 'Nice dinners out', cost: 300 },
+        { icon: '📱', text: 'Phone & streaming subscriptions', cost: 80 },
+        { icon: '☕', text: 'Daily coffee & treats', cost: 120 },
+        { icon: '🛍️', text: 'Shopping sprees & clothes', cost: 200 },
+        { icon: '🍽️', text: 'Nice dinners & date nights', cost: 300 },
+        { icon: '🎮', text: 'Gaming & entertainment', cost: 150 },
         { icon: '✈️', text: 'Weekend getaway fund', cost: 250 }
       ],
-      color: 'from-purple-400 to-blue-500'
+      color: 'from-pink-400 via-purple-500 to-indigo-500',
+      bgPattern: 'bg-gradient-to-br from-pink-50 to-purple-50'
     },
     nomad: {
-      title: '🌴 Digital Nomad Life',
-      subtitle: 'Live & work anywhere (~12 hrs/week)',
+      title: '🌴 Digital Nomad Dreams',
+      subtitle: 'Live your best life anywhere (~12 hrs/week)',
       items: [
-        { icon: '📱', text: 'International phone plan', cost: 100 },
-        { icon: '🏠', text: 'Beautiful Bali villa (monthly)', cost: 800 },
-        { icon: '🍜', text: 'Amazing local food daily', cost: 300 },
-        { icon: '🏍️', text: 'Scooter rental & adventures', cost: 150 },
-        { icon: '✈️', text: 'Flight to next destination', cost: 400 },
-        { icon: '💻', text: 'Co-working space membership', cost: 100 },
-        { icon: '🧘', text: 'Yoga classes & wellness', cost: 200 },
-        { icon: '👕', text: 'Climate-appropriate wardrobe', cost: 300 }
+        { icon: '🏖️', text: 'Beachfront villa in Bali', cost: 800 },
+        { icon: '🍜', text: 'Amazing street food daily', cost: 300 },
+        { icon: '🏍️', text: 'Scooter adventures', cost: 150 },
+        { icon: '✈️', text: 'Flights to new destinations', cost: 400 },
+        { icon: '💻', text: 'Co-working & wifi', cost: 100 },
+        { icon: '🧘', text: 'Yoga & wellness retreats', cost: 200 },
+        { icon: '📱', text: 'Global connectivity', cost: 100 },
+        { icon: '🎒', text: 'Travel gear & experiences', cost: 300 }
       ],
-      color: 'from-cyan-400 to-blue-500'
+      color: 'from-cyan-400 via-blue-500 to-purple-600',
+      bgPattern: 'bg-gradient-to-br from-cyan-50 to-blue-50'
     },
     career: {
-      title: '🚀 Career Builder',
-      subtitle: 'Build your future (~30+ hrs/week)',
+      title: '🚀 Boss Mode Activated',
+      subtitle: 'Building your empire (~30+ hrs/week)',
       items: [
-        { icon: '📱', text: 'Phone & internet bills', cost: 120 },
-        { icon: '🏠', text: 'Nice apartment rent', cost: 2000 },
-        { icon: '👶', text: 'Family expenses', cost: 1500 },
-        { icon: '💰', text: 'Monthly savings', cost: 1000 },
-        { icon: '🎓', text: 'Professional development', cost: 300 },
-        { icon: '🚗', text: 'Car payment', cost: 500 },
-        { icon: '🏥', text: 'Health & insurance', cost: 400 },
-        { icon: '✈️', text: 'Family vacation fund', cost: 600 }
+        { icon: '🏠', text: 'Dream apartment/house', cost: 2000 },
+        { icon: '👶', text: 'Family & future planning', cost: 1500 },
+        { icon: '💰', text: 'Investment & savings', cost: 1000 },
+        { icon: '🎓', text: 'Skills & certifications', cost: 300 },
+        { icon: '🚗', text: 'Nice car payment', cost: 500 },
+        { icon: '🏥', text: 'Premium health coverage', cost: 400 },
+        { icon: '✈️', text: 'Family vacation fund', cost: 600 },
+        { icon: '📱', text: 'All the tech & subscriptions', cost: 120 }
       ],
-      color: 'from-emerald-400 to-teal-500'
+      color: 'from-emerald-400 via-teal-500 to-green-600',
+      bgPattern: 'bg-gradient-to-br from-emerald-50 to-teal-50'
     }
   };
 
@@ -86,32 +89,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const remaining = monthlyNet - totalCost;
     
     return `
-      <div class="lifestyle-card active bg-gradient-to-br ${lifestyle.color} text-white rounded-2xl p-6 shadow-2xl">
-        <div class="text-center mb-6">
-          <h3 class="text-2xl font-bold mb-2">${lifestyle.title}</h3>
-          <p class="text-lg opacity-90">${lifestyle.subtitle}</p>
-          <div class="mt-4 text-3xl font-bold">${formatCurrency(monthlyNet)}/month</div>
+      <div class="lifestyle-card active bg-gradient-to-br ${lifestyle.color} text-white rounded-3xl p-8 shadow-2xl border-4 border-white/20 backdrop-blur-sm transition-all duration-300">
+        <!-- Header with floating elements -->
+        <div class="relative text-center mb-8">
+          <div class="absolute -top-2 -right-2 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
+          <div class="absolute -bottom-2 -left-2 w-6 h-6 bg-white/30 rounded-full animate-pulse" style="animation-delay: 1s"></div>
+          <h3 class="text-3xl font-black mb-3 drop-shadow-lg">${lifestyle.title}</h3>
+          <p class="text-lg opacity-90 font-medium">${lifestyle.subtitle}</p>
+          <div class="mt-6 relative">
+            <div class="text-5xl font-black drop-shadow-xl">${formatCurrency(monthlyNet)}</div>
+            <div class="text-lg font-bold opacity-80">/month</div>
+            <div class="absolute -top-1 -right-1 text-2xl animate-bounce">✨</div>
+          </div>
         </div>
         
-        <div class="space-y-3 mb-6">
-          ${lifestyle.items.map(item => `
-            <div class="lifestyle-item flex justify-between items-center bg-white bg-opacity-20 rounded-lg p-3 backdrop-blur-sm">
+        <!-- Lifestyle items with enhanced styling -->
+        <div class="space-y-4 mb-8">
+          ${lifestyle.items.map((item, index) => `
+            <div class="lifestyle-item flex justify-between items-center bg-white/20 rounded-2xl p-4 backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all duration-200" style="animation-delay: ${index * 0.1}s">
               <span class="flex items-center">
-                <span class="text-xl mr-3">${item.icon}</span>
-                <span class="font-medium">${item.text}</span>
+                <span class="text-2xl mr-4 drop-shadow-sm">${item.icon}</span>
+                <span class="font-semibold text-lg">${item.text}</span>
               </span>
-              <span class="font-bold">${formatCurrency(item.cost)}</span>
+              <span class="font-black text-lg bg-white/20 px-3 py-1 rounded-full">${formatCurrency(item.cost)}</span>
             </div>
           `).join('')}
         </div>
         
-        <div class="border-t border-white border-opacity-30 pt-4 text-center">
-          <div class="text-lg font-semibold">
+        <!-- Footer with enhanced styling -->
+        <div class="relative border-t-2 border-white/30 pt-6 text-center">
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white/40 rounded-full"></div>
+          <div class="text-xl font-black drop-shadow-lg">
             ${remaining > 0 ? 
-              `💸 ${formatCurrency(remaining)} left for more fun!` : 
-              `🎯 Perfect lifestyle match!`
+              `🎉 ${formatCurrency(remaining)} left for spontaneous fun!` : 
+              `🎯 Perfect lifestyle match - living your best life!`
             }
           </div>
+          ${remaining > 0 ? 
+            `<div class="mt-2 text-sm opacity-80 font-medium">Time to treat yourself! 💅</div>` : 
+            `<div class="mt-2 text-sm opacity-80 font-medium">You're absolutely crushing it! 🔥</div>`
+          }
         </div>
       </div>
     `;

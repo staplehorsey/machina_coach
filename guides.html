@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Become a Machina Guide</title>
+  <title>Turn Your Influence Into Income ✨ | Machina Guides</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <script>
@@ -11,208 +11,553 @@
       theme: {
         extend: {
           colors: {
-            primary: '#6366f1',
-            secondary: '#8b5cf6',
-            accent: '#06b6d4',
+            primary: '#ff006e',
+            secondary: '#8338ec',
+            accent: '#3a86ff',
+            neon: '#06ffa5',
+            sunset: '#ffbe0b',
+            pink: '#fb5607',
+          },
+          fontFamily: {
+            'display': ['Inter', 'system-ui', 'sans-serif'],
+            'body': ['Inter', 'system-ui', 'sans-serif'],
           },
         },
       },
     };
   </script>
 </head>
-<body class="font-sans antialiased text-gray-800">
+<body class="font-body antialiased text-gray-800 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
   <!-- Hero -->
-  <header class="bg-gradient-to-br from-secondary via-primary to-accent text-white py-32 text-center relative overflow-hidden">
-    <div class="absolute inset-0 bg-black/10"></div>
+  <header class="bg-gradient-to-br from-primary via-secondary to-accent text-white py-20 md:py-32 text-center relative overflow-hidden">
+    <!-- Floating shapes -->
+    <div class="absolute top-10 left-10 w-20 h-20 bg-neon/20 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute top-32 right-16 w-32 h-32 bg-sunset/20 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s"></div>
+    <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-pink/20 rounded-full blur-lg animate-pulse" style="animation-delay: 2s"></div>
+    
     <div class="container mx-auto px-6 max-w-5xl relative z-10">
       <div class="animate-fade-in-up">
-        <div class="mb-4">
-          <span class="inline-block bg-white/20 text-white border border-white/30 rounded-full px-4 py-2 text-sm font-medium backdrop-blur-sm">
-            Now in Beta
+        <div class="mb-6">
+          <span class="inline-block bg-neon/20 text-white border border-neon/30 rounded-full px-6 py-3 text-sm font-bold backdrop-blur-sm shadow-lg">
+            ✨ Your followers are waiting
           </span>
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-          Help others. Grow yourself.
+        <h1 class="font-display text-4xl md:text-7xl font-black leading-tight mb-6 bg-gradient-to-r from-white via-neon to-sunset bg-clip-text text-transparent">
+          Turn Your Influence<br/>Into Income 💰
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
-          Become a Machina Guide and earn on your terms with 100% AI support
+        <p class="text-lg md:text-2xl mb-8 text-white/90 max-w-4xl mx-auto font-medium">
+          Your followers already see you as someone who has their life together.<br/>
+          <span class="text-neon font-bold">Now get paid to be that supportive presence.</span>
         </p>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 max-w-2xl mx-auto border border-white/20">
+          <p class="text-lg font-semibold text-white mb-2">💡 Here's the deal:</p>
+          <p class="text-white/90">You bring the personality, AI brings the expertise. Show up, be yourself, let AI do the coaching.</p>
+        </div>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button class="text-lg px-8 py-4 bg-white text-primary hover:bg-gray-100 font-bold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105" onclick="document.querySelector('#waitlist-section').scrollIntoView({behavior: 'smooth'})">
-            Start Now
+          <button class="text-lg px-10 py-5 bg-gradient-to-r from-neon to-sunset text-gray-900 hover:from-sunset hover:to-neon font-black rounded-2xl shadow-2xl transition-all duration-300 hover:shadow-neon/50 hover:scale-105 transform">
+            Start Earning $3K/Month 🚀
           </button>
-          <a href="#calculator" class="text-lg px-8 py-4 bg-white/20 text-white hover:bg-white hover:text-primary font-semibold rounded-lg border-2 border-white/50 backdrop-blur-sm transition-all duration-300">
-            See Earnings Calculator
+          <a href="#calculator" class="text-lg px-8 py-4 bg-white/20 text-white hover:bg-white hover:text-primary font-bold rounded-2xl border-2 border-white/50 backdrop-blur-sm transition-all duration-300 hover:scale-105">
+            💰 See Your Potential
           </a>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+    
+    <!-- Wavy bottom -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="white"/>
+      </svg>
+    </div>
   </header>
 
   <!-- Video Hook -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h2 class="text-3xl font-bold mb-4 text-gray-900">See How It Works</h2>
-      <p class="text-lg text-gray-600 mb-8">Watch this quick overview of becoming a Machina Guide</p>
+  <section class="py-20 bg-white relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-accent/10 to-neon/10 rounded-full blur-2xl"></div>
+    
+    <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+      <div class="mb-12">
+        <span class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          📹 60-Second Explainer
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight py-2">
+          Watch: AI Does the Heavy Lifting ✨
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          See exactly how <span class="font-bold text-primary">you facilitate</span> while <span class="font-bold text-secondary">AI provides real-time guidance</span> during every session
+        </p>
+      </div>
       
-      <div class="max-w-sm mx-auto">
-        <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="aspect-ratio: 9/16;">
-          <iframe 
-            src="https://player.vimeo.com/video/1106061354?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-            frameborder="0" 
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Machina Guide Process">
-          </iframe>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="text-left space-y-6">
+            <div class="bg-gradient-to-r from-neon/10 to-sunset/10 rounded-2xl p-6 border border-neon/20">
+              <h3 class="font-bold text-lg mb-2 text-gray-900">🎯 You're the Accountability Partner</h3>
+              <p class="text-gray-600">Your natural warmth and authenticity keep clients engaged and motivated</p>
+            </div>
+            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 border border-primary/20">
+              <h3 class="font-bold text-lg mb-2 text-gray-900">🤖 AI is Your Co-Pilot</h3>
+              <p class="text-gray-600">Ellie listens to every session and gives you gentle cues and expert suggestions</p>
+            </div>
+            <div class="bg-gradient-to-r from-accent/10 to-pink/10 rounded-2xl p-6 border border-accent/20">
+              <h3 class="font-bold text-lg mb-2 text-gray-900">💰 $70 Per 45-Minute Session</h3>
+              <p class="text-gray-600">Work just 12 hours/week from anywhere and earn $3,000+ monthly</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="order-1 lg:order-2">
+          <div class="max-w-sm mx-auto lg:mx-0 w-full">
+            <div class="relative overflow-hidden rounded-3xl shadow-2xl" style="aspect-ratio: 9/16; box-shadow: 0 0 0 4px rgba(255, 0, 110, 0.2), 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+              <iframe 
+                src="https://player.vimeo.com/video/1106061354?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;"
+                title="Machina Guide Process"
+                class="w-full h-full">
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Who are you -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h2 class="text-4xl font-bold mb-8 text-gray-900">Is this you?</h2>
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">🤝</div>
-          <h3 class="text-xl font-semibold mb-3">Naturally empathetic</h3>
-          <p class="text-gray-600">Kind, caring, and an excellent listener who people trust</p>
+  <!-- Target Audience -->
+  <section class="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 relative overflow-hidden">
+    <!-- Floating elements -->
+    <div class="absolute top-10 right-10 text-6xl opacity-20 animate-bounce">✨</div>
+    <div class="absolute bottom-10 left-10 text-4xl opacity-30 animate-pulse">💫</div>
+    <div class="absolute top-1/2 left-1/4 text-5xl opacity-15 animate-spin" style="animation-duration: 10s">🌟</div>
+    
+    <div class="container mx-auto px-6 max-w-6xl text-center relative z-10">
+      <div class="mb-12">
+        <span class="inline-block bg-gradient-to-r from-sunset to-pink text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          👋 Hey Influencer!
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          This is Perfect if You're...
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          Already building an audience? Your followers trust you for a reason. <span class="font-bold text-primary">Time to monetize that influence!</span>
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-primary/20 hover:scale-105 transition-all duration-300 hover:shadow-2xl flex flex-col h-full">
+          <div class="text-6xl mb-6 animate-bounce text-center">📱</div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900 text-center">Content Creator</h3>
+          <p class="text-gray-600 mb-6 flex-grow">You already share your life and insights online. People see you as someone who "has it together."</p>
+          <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-3 mt-auto">
+            <p class="text-sm font-semibold text-primary text-center">Perfect fit! Your audience already trusts you 💯</p>
+          </div>
         </div>
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">🌟</div>
-          <h3 class="text-xl font-semibold mb-3">Natural supporter</h3>
-          <p class="text-gray-600">People naturally lean on you for advice and emotional support</p>
+        
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-secondary/20 hover:scale-105 transition-all duration-300 hover:shadow-2xl flex flex-col h-full">
+          <div class="text-6xl mb-6 animate-pulse text-center">💪</div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900 text-center">Natural Cheerleader</h3>
+          <p class="text-gray-600 mb-6 flex-grow">Friends come to you for motivation and support. You're the one who believes in people when they don't believe in themselves.</p>
+          <div class="bg-gradient-to-r from-neon/10 to-sunset/10 rounded-xl p-3 mt-auto">
+            <p class="text-sm font-semibold text-secondary text-center">You're already doing this for free! 🎯</p>
+          </div>
         </div>
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg">
-          <div class="text-4xl mb-4">🚀</div>
-          <h3 class="text-xl font-semibold mb-3">Future-focused</h3>
-          <p class="text-gray-600">Fast learner excited by the future of work and helping others grow</p>
+        
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-accent/20 hover:scale-105 transition-all duration-300 hover:shadow-2xl flex flex-col h-full">
+          <div class="text-6xl mb-6 animate-spin text-center" style="animation-duration: 3s">🚀</div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900 text-center">Future-Focused</h3>
+          <p class="text-gray-600 mb-6 flex-grow">You're excited about AI and the future of work. You want to be part of something innovative and meaningful.</p>
+          <div class="bg-gradient-to-r from-accent/10 to-pink/10 rounded-xl p-3 mt-auto">
+            <p class="text-sm font-semibold text-accent text-center">Welcome to the future of coaching! ✨</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 bg-gradient-to-r from-primary via-secondary to-accent p-1 rounded-3xl max-w-4xl mx-auto">
+        <div class="bg-white rounded-3xl p-8">
+          <h3 class="font-display text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            💡 No Expertise Required!
+          </h3>
+          <p class="text-lg text-gray-600">
+            You don't need to be a certified coach or therapist. <span class="font-bold text-primary">AI handles all the expertise</span> - you just need to be your authentic, supportive self.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- What you get -->
-  <section class="py-20">
-    <div class="container mx-auto px-6 max-w-6xl text-center">
-      <h2 class="text-4xl font-bold mb-4 text-gray-900">What you get</h2>
-      <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">Everything you need to build a meaningful career helping others</p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">🌍</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Flexible, remote income</h3>
-          <p class="text-gray-600 leading-relaxed">Set your own hours & rates—work from anywhere in the world.</p>
+  <section class="py-20 bg-white relative overflow-hidden">
+    <!-- Background patterns -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-5">
+      <div class="absolute top-20 left-20 w-32 h-32 border-4 border-primary rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-24 h-24 border-4 border-secondary rounded-full"></div>
+      <div class="absolute top-1/2 left-1/2 w-40 h-40 border-4 border-accent rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 max-w-6xl text-center relative z-10">
+      <div class="mb-16">
+        <span class="inline-block bg-gradient-to-r from-neon to-sunset text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          🎁 What You Get
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight py-2">
+          Everything You Need to Start Earning
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
+          We've built the complete system so you can focus on what you do best: <span class="font-bold text-primary">being your authentic, supportive self</span>
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-3xl shadow-xl border border-primary/20 hover:scale-105 transition-all duration-300 group">
+          <div class="text-6xl mb-6 group-hover:animate-bounce">🤖</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Live AI Co-Pilot</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">Ellie listens to every session and whispers gentle cues and expert suggestions in real-time</p>
+          <div class="bg-white/50 rounded-xl p-3">
+            <p class="text-sm font-semibold text-primary">Never feel lost or unprepared! ✨</p>
+          </div>
         </div>
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">🤖</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">100% AI support</h3>
-          <p class="text-gray-600 leading-relaxed">Ellie generates science-backed game plans so you can focus on human connection.</p>
+        
+        <div class="bg-gradient-to-br from-neon/5 to-sunset/5 p-8 rounded-3xl shadow-xl border border-neon/20 hover:scale-105 transition-all duration-300 group">
+          <div class="text-6xl mb-6 group-hover:animate-pulse">💰</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">$3K+ Monthly Income</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">$70 per 45-minute session. Work just 12 hours/week from anywhere in the world</p>
+          <div class="bg-white/50 rounded-xl p-3">
+            <p class="text-sm font-semibold text-secondary">Fully remote, set your own schedule! 🌍</p>
+          </div>
         </div>
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">🎓</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Career growth</h3>
-          <p class="text-gray-600 leading-relaxed">Hands-on experience in mental health; we help you work towards certifications.</p>
+        
+        <div class="bg-gradient-to-br from-accent/5 to-pink/5 p-8 rounded-3xl shadow-xl border border-accent/20 hover:scale-105 transition-all duration-300 group">
+          <div class="text-6xl mb-6 group-hover:animate-spin" style="animation-duration: 2s">🛡️</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Complete Safety Net</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">Built-in protections, session monitoring, and 24/7 support for your peace of mind</p>
+          <div class="bg-white/50 rounded-xl p-3">
+            <p class="text-sm font-semibold text-accent">We've got your back! 🤗</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Additional benefits row -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 text-left border border-primary/20">
+          <h4 class="font-bold text-lg mb-3 text-gray-900">📚 Simple Certification Process</h4>
+          <p class="text-gray-600">Quick online training focused on facilitation skills, not complex coaching theory</p>
+        </div>
+        <div class="bg-gradient-to-r from-sunset/10 to-pink/10 rounded-2xl p-6 text-left border border-sunset/20">
+          <h4 class="font-bold text-lg mb-3 text-gray-900">📈 Growth Opportunities</h4>
+          <p class="text-gray-600">Build your personal brand while helping others - perfect for expanding your influence</p>
         </div>
       </div>
     </div>
   </section>
   <!-- How it works -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-5xl text-center">
-      <h2 class="text-4xl font-bold mb-4 text-gray-900">How it works</h2>
-      <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">Get started in just three simple steps</p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-          <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6">1</div>
-          <h4 class="text-2xl font-bold mb-4 text-gray-900">Get Certified</h4>
-          <p class="text-gray-600 leading-relaxed">Take our free self-guided course and earn your certification in as little as 24 hours.</p>
+  <section class="py-20 bg-gradient-to-br from-gray-50 via-purple-50 to-pink-50 relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-accent/5 to-neon/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s"></div>
+    
+    <div class="container mx-auto px-6 max-w-6xl text-center relative z-10">
+      <div class="mb-16">
+        <span class="inline-block bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          🚀 Super Simple Process
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight py-2">
+          Start Earning in 3 Easy Steps
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
+          We've made it ridiculously simple to get started. <span class="font-bold text-primary">Seriously, you could be earning within a week!</span>
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border-4 border-primary/20 hover:scale-105 transition-all duration-300 group">
+            <div class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg animate-bounce">
+              1
+            </div>
+            <div class="text-6xl mb-6 group-hover:animate-spin">📚</div>
+            <h4 class="text-2xl font-bold mb-4 text-gray-900">Quick Certification</h4>
+            <p class="text-gray-600 leading-relaxed mb-4">Simple online training focused on facilitation skills - no complex coaching theory required!</p>
+            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-3">
+              <p class="text-sm font-semibold text-primary">Takes just a few hours ⚡</p>
+            </div>
+          </div>
+          <!-- Connecting line -->
+          <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-1 bg-gradient-to-r from-primary to-secondary transform -translate-y-1/2 z-20"></div>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-          <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6">2</div>
-          <h4 class="text-2xl font-bold mb-4 text-gray-900">Set Up Profile</h4>
-          <p class="text-gray-600 leading-relaxed">Create your guide profile, set your rate, and start sharing on social media.</p>
+        
+        <!-- Step 2 -->
+        <div class="relative">
+          <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border-4 border-secondary/20 hover:scale-105 transition-all duration-300 group">
+            <div class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg animate-bounce" style="animation-delay: 0.5s">
+              2
+            </div>
+            <div class="text-6xl mb-6 group-hover:animate-pulse">📅</div>
+            <h4 class="text-2xl font-bold mb-4 text-gray-900">Set Your Vibe</h4>
+            <p class="text-gray-600 leading-relaxed mb-4">Choose your availability, set your rates, and create your personal booking link</p>
+            <div class="bg-gradient-to-r from-secondary/10 to-accent/10 rounded-xl p-3">
+              <p class="text-sm font-semibold text-secondary">Total flexibility! 🌟</p>
+            </div>
+          </div>
+          <!-- Connecting line -->
+          <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-1 bg-gradient-to-r from-secondary to-accent transform -translate-y-1/2 z-20"></div>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-          <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6">3</div>
-          <h4 class="text-2xl font-bold mb-4 text-gray-900">Start Earning</h4>
-          <p class="text-gray-600 leading-relaxed">Book 45-minute sessions through your personal link</p>
+        
+        <!-- Step 3 -->
+        <div class="relative">
+          <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border-4 border-accent/20 hover:scale-105 transition-all duration-300 group">
+            <div class="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-accent to-neon rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg animate-bounce" style="animation-delay: 1s">
+              3
+            </div>
+            <div class="text-6xl mb-6 group-hover:animate-bounce">💰</div>
+            <h4 class="text-2xl font-bold mb-4 text-gray-900">Start Earning!</h4>
+            <p class="text-gray-600 leading-relaxed mb-4">Share your link, book sessions, and watch your income grow - AI handles the rest!</p>
+            <div class="bg-gradient-to-r from-accent/10 to-neon/10 rounded-xl p-3">
+              <p class="text-sm font-semibold text-accent">$70 per session! 🎯</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to action -->
+      <div class="bg-gradient-to-r from-primary via-secondary to-accent p-1 rounded-3xl max-w-3xl mx-auto">
+        <div class="bg-white rounded-3xl p-8">
+          <h3 class="font-display text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            ⚡ Ready to Turn Your Influence Into Income?
+          </h3>
+          <p class="text-lg text-gray-600 mb-6">
+            Join hundreds of creators already earning with Machina. <span class="font-bold text-primary">Your followers are waiting!</span>
+          </p>
+          <button class="bg-gradient-to-r from-neon to-sunset text-gray-900 font-black px-8 py-4 rounded-2xl shadow-xl hover:scale-105 transition-all duration-300" onclick="document.querySelector('#waitlist-section').scrollIntoView({behavior: 'smooth'})">
+            Get Started Now 🚀
+          </button>
         </div>
       </div>
     </div>
   </section>
 
+
+
   <!-- Safety & Protection -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h2 class="text-4xl font-bold mb-4 text-gray-900">Your Safety Comes First</h2>
-      <p class="text-xl text-gray-600 mb-16 max-w-2xl mx-auto">We've built comprehensive protections to ensure you feel safe and supported as a guide</p>
+  <section class="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-secondary/10 rounded-full animate-pulse" style="animation-delay: 1s"></div>
+    <div class="absolute top-1/2 right-1/4 w-16 h-16 bg-accent/10 rounded-full animate-pulse" style="animation-delay: 2s"></div>
+    
+    <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+      <div class="mb-16">
+        <span class="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          🛡️ Safety First
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          We've Got Your Back 🤗
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
+          Feel confident and secure with our comprehensive protection system. <span class="font-bold text-primary">Your safety and peace of mind are our top priority!</span>
+        </p>
+      </div>
       
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">🔒</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">You Control Client Approval</h3>
-          <p class="text-gray-600 leading-relaxed">All clients are approved by you with the ability to set filters like age on your profile. You decide who you work with.</p>
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-primary/20 hover:scale-105 transition-all duration-300 group flex flex-col h-full">
+          <div class="text-6xl mb-6 group-hover:animate-spin text-center" style="animation-duration: 2s">🔒</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900 text-center">AI Monitors Everything</h3>
+          <p class="text-gray-600 leading-relaxed mb-6 flex-grow">Ellie listens to every session and can instantly alert our team if anything feels off</p>
+          <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-3 mt-auto">
+            <p class="text-sm font-semibold text-primary text-center">Real-time protection! ✨</p>
+          </div>
         </div>
         
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">🎓</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Certified Clients Only</h3>
-          <p class="text-gray-600 leading-relaxed">Clients must complete our coaching student certification program emphasizing safety rules and responsible behavior.</p>
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-secondary/20 hover:scale-105 transition-all duration-300 group flex flex-col h-full">
+          <div class="text-6xl mb-6 group-hover:animate-bounce text-center">📞</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900 text-center">24/7 Human Support</h3>
+          <p class="text-gray-600 leading-relaxed mb-6 flex-grow">Our amazing support team is always just one click away, day or night</p>
+          <div class="bg-gradient-to-r from-secondary/10 to-accent/10 rounded-xl p-3 mt-auto">
+            <p class="text-sm font-semibold text-secondary text-center">Never alone! 👥</p>
+          </div>
         </div>
         
-        <div class="card-feature bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <div class="text-5xl mb-6">⚡</div>
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">End Sessions Anytime</h3>
-          <p class="text-gray-600 leading-relaxed">You can end a session at any time for any reason and the event will be added to their profile to inform future guides.</p>
+        <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-accent/20 hover:scale-105 transition-all duration-300 group flex flex-col h-full">
+          <div class="text-6xl mb-6 group-hover:animate-pulse text-center">⚠️</div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900 text-center">Your Control, Always</h3>
+          <p class="text-gray-600 leading-relaxed mb-6 flex-grow">End any session instantly for any reason - your comfort and boundaries matter most</p>
+          <div class="bg-gradient-to-r from-accent/10 to-pink/10 rounded-xl p-3 mt-auto">
+            <p class="text-sm font-semibold text-accent text-center">You're in charge! 💪</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Trust indicators -->
+      <div class="mt-12 bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/40">
+        <div class="flex flex-wrap justify-center items-center gap-6 text-sm font-semibold text-gray-600">
+          <span class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+            Encrypted Sessions
+          </span>
+          <span class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+            Professional Standards
+          </span>
+          <span class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-pink-500 rounded-full animate-pulse"></div>
+            Trusted by 100+ Guides
+          </span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Earnings calculator -->
-  <section class="py-16 bg-gray-50" id="calculator">
-    <div class="container mx-auto px-6 md:px-0 max-w-3xl text-center">
-      <h2 class="text-3xl font-bold mb-8">Earnings calculator</h2>
-
-      <div class="mb-8 text-left">
-        <label class="font-semibold" for="hours">Hours per week: <span id="hoursVal" class="font-bold">12</span></label>
-        <input id="hours" type="range" min="1" max="40" value="12" class="w-full mt-2 slider" />
-      </div>
-
-      <div class="mb-8 text-left">
-        <label class="font-semibold" for="rate">Session rate ($): 
-          <input id="rateNum" type="number" min="40" max="200" step="5" value="60" class="w-24 px-2 py-1 border rounded mr-2 text-gray-800 inline-block align-middle" />
-        </label>
-        <input id="rate" type="range" min="40" max="200" step="5" value="60" class="w-full mt-2 slider" />
-        <p class="text-sm text-gray-500 mt-1">Session duration: 45&nbsp;minutes</p>
-      </div>
-
-      <div class="bg-white shadow-lg rounded-xl p-6 mb-6">
-        <h3 class="text-2xl font-semibold mb-2">Estimated monthly income</h3>
-        <p class="text-4xl font-extrabold text-primary" id="income">$3,360</p>
-        <p class="text-sm text-gray-500">after 30% Machina cut</p>
-      </div>
-
-      <div id="lifestyle" class="text-lg"></div>
+  <section class="py-20 bg-gradient-to-br from-sunset/20 via-pink/20 to-primary/20 relative overflow-hidden" id="calculator">
+    <!-- Background elements -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+      <div class="absolute top-20 left-20 text-8xl transform rotate-12">💰</div>
+      <div class="absolute bottom-20 right-20 text-6xl transform -rotate-12">📈</div>
+      <div class="absolute top-1/2 left-1/2 text-4xl transform -translate-x-1/2 -translate-y-1/2 rotate-45">✨</div>
     </div>
-  </section>
-
-  <!-- Waitlist -->
-  <section id="waitlist-section" class="py-20 bg-gradient-to-br from-secondary to-primary text-white text-center">
-    <div class="container mx-auto px-6 max-w-2xl">
-      <h2 class="text-4xl font-bold mb-4">Ready to get started?</h2>
-      <p class="text-xl mb-8 text-gray-100">Join our waitlist and be among the first to start earning as a Machina Guide</p>
-      <form id="waitlist-form-guide" class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-        <input required type="email" class="form-input flex-grow px-6 py-4 rounded-lg text-gray-800 text-lg" placeholder="Enter your email address" />
-        <button type="submit" class="btn-primary px-8 py-4 font-bold rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl">Join Waitlist</button>
-      </form>
-      <div id="waitlist-success-guide" class="mt-6 hidden bg-white/20 rounded-lg p-4 backdrop-blur-sm">
-        <div class="text-2xl mb-2">🎉</div>
-        <div class="text-lg font-semibold">Thanks! We'll be in touch soon with next steps.</div>
+    
+    <div class="container mx-auto px-6 max-w-4xl text-center relative z-10">
+      <div class="mb-12">
+        <span class="inline-block bg-gradient-to-r from-sunset to-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+          💰 Show Me The Money!
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-black mb-6 bg-gradient-to-r from-sunset via-primary to-secondary bg-clip-text text-transparent leading-tight py-2">
+          Your Earning Potential 🚀
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Play with the sliders to see how much you could earn! <span class="font-bold text-primary">Remember: you set your own rates and schedule</span>
+        </p>
       </div>
-      <p class="text-sm text-gray-200 mt-6">We'll send you details about our certification program and next steps.</p>
+
+      <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/40 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- Left Column -->
+          <div class="space-y-4">
+            <div class="h-12 flex items-center">
+              <span class="font-bold text-lg text-gray-900">⏰ Hours per week:</span>
+              <span id="hoursVal" class="font-black text-primary text-xl ml-2">12</span>
+              <!-- Hidden spacer to match input height -->
+              <div class="w-20 h-10 ml-2 opacity-0" aria-hidden="true"></div>
+            </div>
+            <div class="flex items-center">
+              <input id="hours" type="range" min="1" max="40" value="12" class="w-full slider h-3 bg-gradient-to-r from-primary to-secondary rounded-full" />
+            </div>
+            <div class="flex items-start">
+              <p class="text-sm text-gray-500">Perfect for side-hustle or part-time income!</p>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="space-y-4">
+            <div class="h-12 flex items-center">
+              <span class="font-bold text-lg text-gray-900">💵 Session rate ($):</span>
+              <input id="rateNum" type="number" min="40" max="200" step="5" value="60" class="w-20 px-3 py-2 border-2 border-primary/20 rounded-xl ml-2 text-gray-800 font-bold text-center bg-primary/5" />
+            </div>
+            <div class="flex items-center">
+              <input id="rate" type="range" min="40" max="200" step="5" value="60" class="w-full slider h-3 bg-gradient-to-r from-sunset to-pink rounded-full" />
+            </div>
+            <div class="flex items-start">
+              <p class="text-sm text-gray-500">45-minute sessions • You keep 70%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-primary via-secondary to-accent p-1 rounded-3xl mb-6">
+          <div class="bg-white rounded-3xl p-8">
+            <h3 class="text-xl font-bold mb-3 text-gray-900">💸 Your Monthly Income</h3>
+            <p class="text-5xl md:text-6xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2" id="income">$3,360</p>
+            <p class="text-sm text-gray-500">after Machina's 30% platform fee</p>
+            <div class="mt-4 flex justify-center items-center gap-4 text-sm">
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full font-semibold">✅ Fully Remote</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-semibold">🌍 Work Anywhere</span>
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full font-semibold">⚡ Flexible Schedule</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="lifestyle" class="text-lg"></div>
+      </div>
+      
+      <!-- Lifestyle examples -->
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <div class="bg-gradient-to-br from-neon/10 to-sunset/10 rounded-2xl p-6 border border-neon/20">
+          <div class="text-4xl mb-3">🏖️</div>
+          <h4 class="font-bold text-lg mb-2">Beach Lifestyle</h4>
+          <p class="text-gray-600 text-sm">$3K/month covers rent in Bali + plenty left for adventures</p>
+        </div>
+        <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 border border-primary/20">
+          <div class="text-4xl mb-3">🏙️</div>
+          <h4 class="font-bold text-lg mb-2">City Side-Hustle</h4>
+          <p class="text-gray-600 text-sm">Perfect supplement to your main income or content creation</p>
+        </div>
+        <div class="bg-gradient-to-br from-accent/10 to-pink/10 rounded-2xl p-6 border border-accent/20">
+          <div class="text-4xl mb-3">🚀</div>
+          <h4 class="font-bold text-lg mb-2">Scale Up</h4>
+          <p class="text-gray-600 text-sm">Many guides earn $5K+ by working 20+ hours per week</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Waitlist form -->
+  <section id="waitlist-section" class="py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 text-white text-center relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute top-10 left-10 w-32 h-32 bg-blue-300/20 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-300/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+    <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-indigo-300/20 rounded-full blur-xl animate-pulse" style="animation-delay: 2s"></div>
+    
+    <div class="container mx-auto px-6 max-w-3xl relative z-10">
+      <div class="mb-8">
+        <div class="text-6xl mb-6 animate-bounce">🚀</div>
+        <h2 class="font-display text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight py-2">
+          Ready to Start Earning?
+        </h2>
+        <p class="text-lg md:text-2xl mb-8 text-white/95 max-w-2xl mx-auto font-medium">
+          Join <span class="font-bold text-blue-200">100+ creators</span> already building income with Machina. <span class="font-bold text-purple-200">Be among the first to turn your influence into earnings!</span>
+        </p>
+      </div>
+      
+      <div class="bg-white/15 backdrop-blur-md rounded-3xl p-8 mb-8 border border-white/30">
+        <form id="waitlist-form-guide" class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <input required type="email" class="form-input flex-grow px-6 py-5 rounded-2xl text-gray-800 text-lg font-medium border-0 shadow-xl" placeholder="✨ Enter your email to get started" />
+          <button type="submit" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-10 py-5 font-black rounded-2xl text-lg transition-all duration-300 shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transform">
+            Join the Waitlist 💰
+          </button>
+        </form>
+        
+        <div id="waitlist-success-guide" class="mt-6 hidden bg-blue-500/20 rounded-2xl p-6 backdrop-blur-sm border border-blue-400/30">
+          <div class="text-4xl mb-3 animate-bounce">🎊</div>
+          <div class="text-xl font-bold mb-2">Welcome to the Machina Guide community!</div>
+          <div class="text-white/95">We'll send you certification details and next steps within 24 hours.</div>
+        </div>
+      </div>
+      
+      <!-- Trust indicators -->
+      <div class="flex flex-wrap justify-center items-center gap-6 text-sm font-semibold text-white/90">
+        <span class="flex items-center gap-2">
+          <div class="w-3 h-3 bg-blue-300 rounded-full animate-pulse"></div>
+          Early Access Program
+        </span>
+        <span class="flex items-center gap-2">
+          <div class="w-3 h-3 bg-purple-300 rounded-full animate-pulse"></div>
+          Quick Certification
+        </span>
+        <span class="flex items-center gap-2">
+          <div class="w-3 h-3 bg-indigo-300 rounded-full animate-pulse"></div>
+          Start Earning Soon
+        </span>
+      </div>
+      
+      <p class="text-sm text-white/80 mt-8 max-w-2xl mx-auto">
+        🔒 Your email is safe with us. We'll only send you updates about becoming a Machina Guide. Unsubscribe anytime.
+      </p>
     </div>
   </section>
 
